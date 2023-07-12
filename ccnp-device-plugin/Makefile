@@ -14,10 +14,10 @@ export GO111MODULE=on
 
 build:
 	CGO_ENABLED=0 GOOS=linux 
-	@go build -a -installsuffix cgo -o build/tdx-device-plugin cmd/server/app.go
+	@go build -a -installsuffix cgo -o build/ccnp-device-plugin cmd/server/app.go
 
 deploy:
-	helm install tdx-device-plugin deploy/helm/tdx-device-plugin 
+	helm install ccnp-device-plugin deploy/helm/ccnp-device-plugin 
 
 clean:
 	@rm -f build
